@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/titlebar_main"></include>-->
+
+    <!--FrameLayout-->
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.11" />
+    <!--底部的RadioGroup-->
+    <RadioGroup
+
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radiogroup_boder"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <RadioButton
+            android:id="@+id/rb_main_frame"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_main_frame_drawable_selector"
+            android:text="主页"
+
+            />
+
+        <RadioButton
+            android:id="@+id/rb_video_frame"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_video_frame_drawable_selector"
+            android:text="视频"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_search_frame"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_search_frame_drawable_selector"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rb_about_frame"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/rb_about_frame_drawable_selector"
+            android:text="关于" />
+
+    </RadioGroup>
+
+
+</LinearLayout>
