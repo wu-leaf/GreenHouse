@@ -5,9 +5,27 @@
     android:orientation="vertical">
     <include layout="@layout/titlebar_about"></include>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="岂有此理"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/icon_1"/>
+
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="       本软件基于OneNet中移物联网开放平台，与相关硬件配合组成农业环境数据监控。拥有实时监测农业种植环境信息，传输监控视频，紧急控制农场设置等基础功能。
+           此外，还有农业科普资讯可供广大农业工作者查阅学习。
+
+
+            版本：1.0.0"/>
+    </LinearLayout>
 </LinearLayout>
