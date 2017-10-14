@@ -133,7 +133,7 @@ public class FragmentMain extends BaseFragment {
         mWebView.clearHistory();
         mWebView.setWebChromeClient(new WebChromeClient());
         mWebView.setWebViewClient(new MyWebViewClient());
-        mWebView.loadUrl("https://open.iot.10086.cn/app/browse2?open_id=e2f85b5a57bb5bf71f40a8425b62d229");
+        mWebView.loadUrl("http://news.cctv.com/2017/08/21/ARTIXyi5Lt5GhgMR5bmfpP1e170821.shtml");
         Log.e("TAG","有毒啊。。。"+url);
     }
 

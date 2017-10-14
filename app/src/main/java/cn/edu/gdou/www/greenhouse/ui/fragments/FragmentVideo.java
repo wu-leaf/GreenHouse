@@ -52,7 +52,7 @@ public class FragmentVideo extends BaseFragment {
     }
     public class VideoListAdapter extends BaseAdapter {
 
-        int[] viewtype = {0, 1, 1, 1, 0, 1, 0, 1};//1 = jcvd, 0 = textView
+        int[] viewtype = {0, 1, 1, 1};//1 = jcvd, 0 = textView
 
         Context context;
         LayoutInflater mInflater;

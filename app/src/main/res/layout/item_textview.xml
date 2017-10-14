@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
-        android:text="This is a holder with textview"
+        android:text="视频录像记录、RTMP推流直播"
         android:textSize="18sp"
         android:textStyle="bold" />
 
