@@ -17,9 +17,9 @@ import cn.edu.gdou.www.greenhouse.ui.fragments.MyFragment;
 
 
 public class MyViewPagerAdapter extends FragmentPagerAdapter {
-    private final ArrayList<MyFragment> fragments;
+    private final ArrayList<Fragment> fragments;
 
-    public MyViewPagerAdapter(FragmentManager fm, ArrayList<MyFragment> fragments) {
+    public MyViewPagerAdapter(FragmentManager fm, ArrayList<Fragment> fragments) {
         super(fm);
         this.fragments = fragments;
     }
@@ -48,6 +48,6 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
      */
     @Override
     public CharSequence getPageTitle(int position) {
-        return fragments.get(position).getTitle();
+        return "title";
     }
 }

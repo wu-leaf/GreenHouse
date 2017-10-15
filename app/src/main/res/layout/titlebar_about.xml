@@ -3,7 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="50dp"
               android:id="@+id/titlebar"
-              android:background="#ffffff"
+              android:background="#303F9F"
               android:orientation="horizontal">
 
     <Button
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text="关于"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="24sp" />
     <Button
         android:alpha="0"

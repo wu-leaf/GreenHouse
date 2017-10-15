@@ -1,26 +1,34 @@
 package cn.edu.gdou.www.greenhouse.ui.fragments;
 
 import android.os.Bundle;
+
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+
 
 import java.util.ArrayList;
+import java.util.List;
 
 import cn.edu.gdou.httpwww.greenhouse.R;
+import cn.edu.gdou.www.greenhouse.ui.adapter.MyFragmentPagerAdapter;
 import cn.edu.gdou.www.greenhouse.ui.adapter.MyViewPagerAdapter;
+import cn.edu.gdou.www.greenhouse.ui.fragments.infragment.DisasterFragment;
+import cn.edu.gdou.www.greenhouse.ui.fragments.infragment.NewsFragment;
+import cn.edu.gdou.www.greenhouse.ui.fragments.infragment.WeatherFragment;
 
 
 public class FragmentNews extends BaseFragment {
 
     ViewPager viewPager;
     TabLayout tabLayout;
-    ArrayList<MyFragment> fragments;
+    ArrayList<Fragment> fragments;
+    private List<String> mStringList;
     MyViewPagerAdapter adapter;
-
+    private MyFragmentPagerAdapter mFragmentPagerAdapter;
     @Override
     protected View initView() {
 
@@ -38,17 +46,34 @@ public class FragmentNews extends BaseFragment {
         super.initData();
         //初始化数据
         fragments = new ArrayList<>();
-        fragments.add(new MyFragment("农业潮流","1"));
-        fragments.add(new MyFragment("天气预报","2"));
-        fragments.add(new MyFragment("灾害预警","3"));
+        fragments.add(new NewsFragment());
+        fragments.add(new WeatherFragment());
+        fragments.add(new DisasterFragment());
+
+        mStringList = new ArrayList<>();
+        mStringList.add("农业资讯");
+        mStringList.add("自然气候");
+        mStringList.add("自然灾害");
 
         //设置ViewPager的适配器
+        //设置tab名称
+        tabLayout.addTab(tabLayout.newTab().setText(mStringList.get(0)));
+        tabLayout.addTab(tabLayout.newTab().setText(mStringList.get(1)));
+        tabLayout.addTab(tabLayout.newTab().setText(mStringList.get(2)));
 
-        //adapter = new ViewPagerAdapter(getSupportFragmentManager(),fragments);
+
+        mFragmentPagerAdapter = new MyFragmentPagerAdapter(getFragmentManager(),fragments,mStringList);
+
+        viewPager.setAdapter(mFragmentPagerAdapter);
+
+        //tablayout viewpage  绑定
+        tabLayout.setupWithViewPager(viewPager);
+
+       /* //adapter = new ViewPagerAdapter(getSupportFragmentManager(),fragments);
         adapter=new MyViewPagerAdapter(getChildFragmentManager(),fragments);
         viewPager.setAdapter(adapter);
         //关联ViewPager
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);*/
         //设置固定的
         //tabLayout.setTabMode(TabLayout.MODE_FIXED);
 //设置滑动的。
